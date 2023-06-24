@@ -1,0 +1,26 @@
+.side-bar-item {
+  display: flex;
+  height: 40px;
+  gap: 1rem;
+  align-items: center;
+  color: #848484;
+  padding: 20px;
+  margin: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+.side-bar-item.selcted{
+  color:white;
+  background:#353945;
+  border-radius: 12px;
+}
+
+.side-bar-item:hover {
+  background: #353945;
+  mix-blend-mode: normal;
+  border-radius: 12px;
+  cursor: pointer;
+}

@@ -1,0 +1,49 @@
+.ListContainer{
+    display:flex;
+    flex-direction:column;
+    width:100% ;
+    justify-content:center ;
+    align-items:center ;
+    height:75vh ;
+    overflow:auto ;
+    padding-top: 60px;
+  }
+  .buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .pageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+  }
+  .pageContainer label{
+    color: white;
+  }
+  .pageContainer input{
+    width: 40px;
+  }
+  .buttonContainer button{
+    width: 150px;
+    height: 34;
+    background: #3772ff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 29px;
+    /* identical to box height, or 180% */
+    outline: none;
+    border: none;
+    color: #ffffff;
+    margin: 10px;
+  }
+  .buttonContainer button:hover{
+    background-color: #1155f4;
+    cursor: pointer;
+  }

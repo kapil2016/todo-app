@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  width: 100%;
+  border-bottom: 4px solid #242731;
+}
+.header-section {
+  margin-left: 40px;
+  color: white;
+  border-bottom: 2px solid #3772ff;
+  padding-bottom: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.header-wallet {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 196.69px;
+  height: 39.27px;
+  background: #191b20;
+  border-radius: 12.2549px;
+  margin-right: 20px;
+}
+.header-balence {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.header-tier {
+  display: flex;
+  flex-direction: row;
+  height: 22.77px;
+  width: 50.87px;
+  background: #a3e3ff;
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.240494px;
+  justify-content: center;
+  align-items: center;
+  color: #3772ff;
+}

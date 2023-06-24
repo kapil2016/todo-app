@@ -1,0 +1,45 @@
+.sidebar {
+  position:relative;
+  top: 0;
+  left: -290px;
+  width: 20vw;
+  background-color: #000000;
+  padding: 5px;
+  height: 100vh;
+  border-right: 2px solid rgb(29, 29, 29);
+  transition: left 0.3s ease-in-out; 
+}
+.logo {
+  display: flex;
+  height: 60px;
+  width: 200px;
+  padding: 20px;
+  gap: 0.5rem;
+  margin: 10px 0 10px 0;
+}
+.logo span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23.5618px;
+  line-height: 31px;
+  /* identical to box height, or 133% */
+  letter-spacing: -0.02em;
+
+  /* white */
+  color: #ffffff;
+}
+.logo div {
+  margin-left: 10px;
+}
+.logo div :hover {
+  background-color: rgb(19, 19, 19);
+  cursor: pointer;
+}
+
+.sidebar.open {
+  left: 0; /* Move the sidebar to the screen */
+}
+.sidebar.close{
+  width: 0;
+}

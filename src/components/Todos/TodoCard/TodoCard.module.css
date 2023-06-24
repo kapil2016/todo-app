@@ -1,0 +1,65 @@
+.todocard {
+  width: 100%;
+  height: 116px;
+  background: #191b20;
+  /* opacity: 0.8; */
+  border-radius: 16px;
+  padding: 10px;
+  margin: 10px;
+  /* border-left:4px solid #000AFF; */
+}
+.title {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #808191;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.todocard.selected{
+    border-left:4px solid #000AFF;
+}
+.Button:hover{
+  cursor: pointer;
+}
+.Button {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the tooltip text */
+.Button::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Show the tooltip on hover */
+.Button:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
