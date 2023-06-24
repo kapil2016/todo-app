@@ -2,7 +2,7 @@ import styles from './TodosList.module.css'
 import AddIcon from '../../SvgIcons/AddIcon';
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addNewTodo } from '../../../States/todos-reducer';
+import { addNewTodo,sortTodos } from '../../../States/todos-reducer';
 import TodoCard from '../TodoCard/TodoCard';
 const TodosList = (props) => {
   const todos = props.todos;
@@ -28,20 +28,30 @@ const TodosList = (props) => {
     }
   }
 
+  function sortTodoHandler(){
+    dispatch(sortTodos())
+  }
+
   return (
-    <div className={styles.todoslist}>
-      <form className={styles.addtodoform}>
-        <div className={styles.inputcontainer}>
-          <input placeholder='Add Todo' ref={inputRef}></input>
-          <input type='datetime-local' ref={dateRef} placeholder="Select date and time"></input>
-          <div onClick={formSubmitHandler} className={styles.Button} data-tooltip="Add" >
-            <AddIcon></AddIcon>
-          </div>
+    <>
+      <div className={styles.todoslist}>
+        <div className={styles.buttonContainer}>
+          <button onClick={sortTodoHandler}>Sort Todos</button>
         </div>
-        <textarea placeholder='Add Todo Description' ref={descriptionRef}></textarea>
-      </form>
-      {todos.map((todo) => <TodoCard key={todo.id} todo={todo}></TodoCard>)}
-    </div>
+        <form className={styles.addtodoform}>
+          <div className={styles.inputcontainer}>
+            <input placeholder='Add Todo' ref={inputRef}></input>
+            <input type='datetime-local' ref={dateRef} placeholder="Select date and time"></input>
+            <div onClick={formSubmitHandler} className={styles.Button} data-tooltip="Add" >
+              <AddIcon></AddIcon>
+            </div>
+          </div>
+          <textarea placeholder='Add Todo Description' ref={descriptionRef}></textarea>
+        </form>
+        {todos.map((todo) => <TodoCard key={todo.id} todo={todo}></TodoCard>)}
+
+      </div>
+    </>
 
   )
 }
